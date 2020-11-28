@@ -197,7 +197,7 @@ header table {
     cursor: pointer;
 }
 #photos_teaser {
-    width:90%;
+    width:95%;
     height:auto;
     transition:0.2s ease-in-out;
     margin:3% 0px;
@@ -217,7 +217,7 @@ header table {
     border-left:3px solid rgb(255, 44, 90);
     transition:0.4s ease-in-out;
     float:right;
-    width:75%;
+    width:76%;
     height:150;
     font-weight: normal;
 }
