@@ -164,9 +164,10 @@ header table {
 #rightImage {
     width:100%;
     height:95vh;
-    background:linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),url("bio.jpg") center center;
+    background:linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),url("bio.JPG") center center;
     background-size:cover;
-    background-repeat:no-repeat;
+    /*background-repeat:no-repeat;*/
+    /*display: block;*/
 }
 #work {
     width:92vw;
@@ -222,9 +223,11 @@ header table {
 }
 
 #bio {
-    width:92vw;
+    /*width:92vw;*/
+    width:100%;
     padding:6vh 4vw;
     font-weight:normal;
+
 }
 #bio h1 {
     padding:5px 0px;
@@ -342,7 +345,7 @@ button:focus {
         cursor: pointer;
     }
     #rightImage {
-        display:none;
+        display:inline-block;
     }
     #top_part {
         border:0px;
@@ -354,9 +357,10 @@ button:focus {
     #about {
         width:92% !important;
         height:75vh;
-        padding-top:20vh !important;
+        padding-top:30vh !important;
         text-align:center;
         padding:0px 4%;
+        display: inline-block;
     }
     #about table {
         width:100%;
