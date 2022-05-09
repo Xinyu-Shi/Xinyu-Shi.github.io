@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://Xinyu-Shi.github.io/sitemap.xml
