@@ -135,6 +135,10 @@ collections:
     name: interests
     required: false
     widget: list
+  - label: News (shown in About widget)
+    name: news
+    required: false
+    widget: list
   - fields:
     - label: Link
       name: link
