@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hiddens | Xinyu Shi</title>
+    <link>https://example.com/hidden/</link>
+      <atom:link href="https://example.com/hidden/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hiddens</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://example.com/media/icon_hu242fe7af13e2e6926f65af4659202b1b_71211_512x512_fill_lanczos_center_3.png</url>
+      <title>Hiddens</title>
+      <link>https://example.com/hidden/</link>
+    </image>
+    
+    <item>
+      <title>Experience</title>
+      <link>https://example.com/hidden/experience_hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/hidden/experience_hidden/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
