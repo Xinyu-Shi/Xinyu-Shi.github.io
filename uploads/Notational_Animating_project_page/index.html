@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Notational Animating: An Interactive Approach to Creating and Editing Animation Keyframes</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+
+            <div class="column has-text-centered">
+            <h2 class="title is-2 publication-title">Notational Animating: An Interactive Approach to Creating and Editing Animation Keyframes</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://xinyu-shi.github.io/" target="_blank">Xinyu Shi</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.liyiwei.org/" target="_blank">Li-Yi Wei</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.nxzhao.com/" target="_blank">Nanxuan Zhao</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.jeffjianzhao.com/" target="_blank">Jian Zhao</a><sup>1</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://rubaiathabib.me/" target="_blank">Rubaiat Habib Kazi</a><sup>2</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <sup>1</sup><span class="author-block">University of Waterloo</span>,
+                    <sup>2</sup><span class="author-block">Adobe Research</span>,
+                  </div>
+
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">CHI 2026</span><br>
+                    <!-- <i class="fas fa-solid fa-trophy" style="color: #c95b2b;"></i>
+                    <span class="author-block" style="color: #c95b2b;">Best Paper Award</span> -->
+                    
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="coming soon" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                     <!-- ArXiv abstract Link -->
+                    <span class="link-block">
+                      <a href="coming soon" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>ArXiv</span>
+                    </a>
+                  </span>   
+
+                  
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href=" https://motion-sketching-production-frontend.up.railway.app/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Live Demo</span>
+                  </a>
+                </span>
+
+               
+
+              <!-- BibTeX Link -->
+              <span class="link-block">
+                <a href="#BibTeX"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-quote-right"></i>
+                </span>
+                <span>BibTex</span>
+              </a>
+            </span>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/teaser_video.mov"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Notational Animating is an interactive approach to create and edit animation keyframes by sketching notations over static drawings.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce the concept of notational animating, an interaction paradigm for animation authoring where users sketch high-level notations over static drawings to indicate intended motions, which are then interpreted by automatic methods (e.g., GenAI models) to generate animation keyframes. Sketched notations have long served as cognitive instruments for animators, capturing forces, poses, dynamics, paths, and other animation features. However, such notations are often context-dependent, non-categorical, ambiguous, and composable based on our analysis of real-world animator-produced sketches. To facilitate interpretation, we first formalize these notations into a structured animation representation (i.e., source, path, and target). We then built an animation authoring system that translates high-level notations into the formalized intended animation, provides dynamic UI widgets for fine-grained parameter control, and establishes a closed feedback loop to resolve ambiguity. Finally, through a preliminary study with animators, we assess the usability of notational animating, reflect its affordance, and identify its contexts of use.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+
+
+
+
+
+<!-- Youtube video -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video (3min)</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <video poster="" id="tree" controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/full_video_3min.mov"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+<!-- Demo Clips with Thumbnail Selector -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div style="margin-top: 5rem; margin-bottom: 2rem;">  
+      <h2 class="title is-3">More Results and Demos</h2>
+      <div class="columns is-centered">
+        <!-- Main Video Player -->
+        <div class="column is-three-quarters">
+          <div class="main-video-container" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+            <video id="main-demo-video" autoplay controls muted loop style="width: 100%; display: block;">
+              <source src="static/videos/demo1_shocking_man.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- Thumbnail Previews -->
+        <div class="column is-one-quarter">
+          <div class="thumbnail-list" style="display: flex; flex-direction: column; gap: 16px; max-height: 600px; overflow-y: auto; padding-right: 8px;">
+            <div class="thumbnail-item active" data-video="static/videos/demo1_shocking_man.mov" style="cursor: pointer; border-radius: 8px; overflow: hidden; border: 3px solid #c95b2b; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(201, 91, 43, 0.3);">
+              <video muted style="width: 100%; display: block; pointer-events: none;">
+                <source src="static/videos/demo1_shocking_man.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="thumbnail-item" data-video="static/videos/demo2_patrick.mov" style="cursor: pointer; border-radius: 8px; overflow: hidden; border: 3px solid transparent; transition: all 0.3s ease;">
+              <video muted style="width: 100%; display: block; pointer-events: none;">
+                <source src="static/videos/demo2_patrick.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="thumbnail-item" data-video="static/videos/demo3_jump.mov" style="cursor: pointer; border-radius: 8px; overflow: hidden; border: 3px solid transparent; transition: all 0.3s ease;">
+              <video muted style="width: 100%; display: block; pointer-events: none;">
+                <source src="static/videos/demo3_jump.mov" type="video/mp4">
+              </video>
+            </div>
+            
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mainVideo = document.getElementById('main-demo-video');
+  const thumbnails = document.querySelectorAll('.thumbnail-item');
+  
+  thumbnails.forEach(thumbnail => {
+    // Play thumbnail video on hover
+    const thumbVideo = thumbnail.querySelector('video');
+    thumbnail.addEventListener('mouseenter', () => {
+      thumbVideo.currentTime = 0;
+      thumbVideo.play();
+    });
+    thumbnail.addEventListener('mouseleave', () => {
+      thumbVideo.pause();
+      thumbVideo.currentTime = 0;
+    });
+    
+    // Switch main video on click
+    thumbnail.addEventListener('click', function() {
+      const videoSrc = this.getAttribute('data-video');
+      mainVideo.src = videoSrc;
+      mainVideo.play();
+      
+      // Update active state
+      thumbnails.forEach(t => {
+        t.style.border = '3px solid transparent';
+        t.style.boxShadow = 'none';
+        t.classList.remove('active');
+      });
+      this.style.border = '3px solid #c95b2b';
+      this.style.boxShadow = '0 2px 10px rgba(201, 91, 43, 0.3)';
+      this.classList.add('active');
+    });
+  });
+});
+</script>
+<!-- End Demo Clips -->
+
+
+<!-- Methodology Section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- add margin top to the section -->
+      <div style="margin-top: 5rem; margin-bottom: 5rem;">
+        <h2 class="title is-3">Methodology</h2>
+        <p class="subtitle" style="margin-bottom: 1.5rem;">The free-form sketched notations are inherently ambiguous, to interpret them systematically and provide users with structured feedback, we first formalize the sketched notations into a structured animation representation. The formalization is informed by content analysis of real-world sketches, see <a href="#Content Analysis Collection">Content Analysis Collection</a> section for more details.</p>
+        <figure class="image">
+          <img src="static/images/representation.png" alt="Methodology" style="width: 100%; border-radius: 8px; box-shadow: 0 0px 0px rgba(0,0,0,0.1);">
+        </figure>
+        <div style="margin-top: 5rem; margin-bottom: rem;"></div>
+          <p class="subtitle" style="margin-bottom: 1.5rem;">With the formalized representation, we leverage the VLM to interpret the sketched notations and generate animation keyframes.</p>
+          <figure class="image">
+            <img src="static/images/VLM_pipeline.png" alt="Methodology" style="width: 100%; border-radius: 8px; box-shadow: 0 0px 0px rgba(0,0,0,0.1);">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Methodology Section -->
+
+
+<!-- Example Gallery Section -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Content Analysis (Real-World Sketches Collection)</h2>
+      <p class="subtitle" style="margin-bottom: 1.5rem;">Explore real-world animation notations from our analysis. Filter by category and subcategory.</p>
+      
+      <!-- Filter Controls -->
+      <div class="columns" style="margin-bottom: 1.5rem;">
+        <div class="column is-narrow">
+          <div class="field">
+            <label class="label">Category</label>
+            <div class="control">
+              <div class="select">
+                <select id="category-filter">
+                  <option value="all">All Categories</option>
+                  <option value="Geometric">Geometric Guides</option>
+                  <option value="Spatial">Spatial Guides</option>
+                  <option value="Amplifier">Motion Amplifiers</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-narrow">
+          <div class="field">
+            <label class="label">Sub-category</label>
+            <div class="control">
+              <div class="select">
+                <select id="subcategory-filter">
+                  <option value="all">All Sub-categories</option>
+                  <optgroup label="Geometric Guides">
+                    <option value="force">Force</option>
+                    <option value="pose">Pose</option>
+                    <option value="path">Path</option>
+                    <option value="style">Style</option>
+                  </optgroup>
+                  <optgroup label="Spatial Guides">
+                    <option value="perspective guide">Perspective Guide</option>
+                    <option value="Alignment arcs">Alignment Arcs</option>
+                  </optgroup>
+                  <optgroup label="Motion Amplifiers">
+                    <option value="impact">Impact</option>
+                    <option value="smears">Smears</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-narrow" style="display: flex; align-items: flex-end;">
+          <button class="button is-dark" id="reset-filters">Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid - Dynamically loaded from JSON -->
+      <div id="gallery-grid" style="display: flex; flex-wrap: wrap; margin: -0.5rem;">
+        <!-- Gallery items will be dynamically inserted here -->
+        <div id="gallery-loading" style="width: 100%; text-align: center; padding: 3rem; flex: 0 0 100%;">
+          <p class="is-size-5" style="color: #888;">Loading examples...</p>
+        </div>
+      </div>
+
+      <!-- No results message -->
+      <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
+        <p class="is-size-5" style="color: #888;">No examples found for the selected filters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Add consistent padding to all sections */
+  section.hero .hero-body {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  section.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .gallery-item .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+  }
+  .gallery-item {
+    transition: opacity 0.3s ease;
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0.5rem;
+  }
+  .gallery-item .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-item .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-item .card-content .label-text {
+    flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+  }
+  .gallery-item.hidden {
+    display: none !important;
+  }
+  #category-filter, #subcategory-filter {
+    min-width: 200px;
+  }
+  @media screen and (max-width: 1024px) {
+    .gallery-item {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .gallery-item {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryFilter = document.getElementById('category-filter');
+  const subcategoryFilter = document.getElementById('subcategory-filter');
+  const resetBtn = document.getElementById('reset-filters');
+  const galleryGrid = document.getElementById('gallery-grid');
+  const noResults = document.getElementById('no-results');
+  const loadingEl = document.getElementById('gallery-loading');
+
+  let galleryData = null;
+
+  // Load gallery data from JSON file
+  fetch('static/data/gallery.json')
+    .then(response => response.json())
+    .then(data => {
+      galleryData = data;
+      renderGallery(data.examples);
+      loadingEl.style.display = 'none';
+    })
+    .catch(error => {
+      console.error('Error loading gallery data:', error);
+      loadingEl.innerHTML = '<p class="is-size-5" style="color: #e74c3c;">Error loading gallery. Please refresh the page.</p>';
+    });
+
+  function renderGallery(examples) {
+    // Clear existing items (except loading)
+    const existingItems = galleryGrid.querySelectorAll('.gallery-item');
+    existingItems.forEach(item => item.remove());
+
+    examples.forEach(example => {
+      const categoryColor = galleryData.categoryColors[example.category] || { bg: '#ccc', text: '#333' };
+      const subcategoryColor = galleryData.subcategoryColors[example.subcategory] || { bg: '#999', text: '#fff', label: example.subcategory };
+
+      const itemHTML = `
+        <div class="gallery-item" data-category="${example.category}" data-subcategory="${example.subcategory}">
+          <div class="card" style="border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <div class="card-image" style="background: #fff;">
+              <figure class="image is-4by3">
+                <a href="${example.url}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                  <img src="${example.image}" alt="${example.label}" style="object-fit: contain; max-width: 100%; max-height: 100%; background: #fff;" loading="lazy">
+                </a>
+              </figure>
+            </div>
+            <div class="card-content" style="padding: 0.6rem;">
+              <div class="tags" style="margin-bottom: 0.3rem; flex-wrap: nowrap;">
+                <span class="tag is-small" style="background-color: ${categoryColor.bg}; color: ${categoryColor.text}; font-weight: 600; font-size: 0.65rem;">${example.category}</span>
+                <span class="tag is-small" style="background-color: ${subcategoryColor.bg}; color: ${subcategoryColor.text}; font-weight: 600; font-size: 0.65rem;">${subcategoryColor.label}</span>
+              </div>
+              <p class="label-text" style="color: #555; font-size: 0.7rem; margin-bottom: 0.3rem;" title="${example.label}"><strong>Label:</strong> ${example.label.replace(/\n/g, ', ')}</p>
+              <a href="${example.url}" target="_blank" style="color: #3273dc; font-size: 0.7rem;">View Source →</a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      galleryGrid.insertAdjacentHTML('beforeend', itemHTML);
+    });
+  }
+
+  function filterGallery() {
+    const selectedCategory = categoryFilter.value;
+    const selectedSubcategory = subcategoryFilter.value;
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    let visibleCount = 0;
+
+    galleryItems.forEach(item => {
+      const itemCategory = item.getAttribute('data-category');
+      const itemSubcategory = item.getAttribute('data-subcategory').toLowerCase();
+
+      const categoryMatch = selectedCategory === 'all' || itemCategory === selectedCategory;
+      // Check if selected subcategory is contained in the item's subcategory (handles combinations like "force / pose")
+      const subcategoryMatch = selectedSubcategory === 'all' || itemSubcategory.includes(selectedSubcategory.toLowerCase());
+
+      if (categoryMatch && subcategoryMatch) {
+        item.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  categoryFilter.addEventListener('change', filterGallery);
+  subcategoryFilter.addEventListener('change', filterGallery);
+  
+  resetBtn.addEventListener('click', function() {
+    categoryFilter.value = 'all';
+    subcategoryFilter.value = 'all';
+    filterGallery();
+  });
+});
+</script>
+<!-- End Example Gallery Section -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @inproceedings{shi2026notational_animating,
+          author = {Shi, Xinyu and Wei, Li-Yi and Zhao, Nanxuan and Zhao, Jian and Kazi, Rubaiat Habib},
+          title = {Notational Animating: An Interactive Approach to Creating and Editing Animation Keyframes},
+          year = {2026},
+          isbn = {979-8-4007-2278-3/2026/04},
+          publisher = {Association for Computing Machinery},
+          address = {New York, NY, USA},
+          url = {https://doi.org/10.1145/3772318.3790707},
+          doi = {10.1145/3772318.3790707},
+          booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+          numpages = {29},
+          location = {Barcelona, Spain},
+          series = {CHI '26}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
