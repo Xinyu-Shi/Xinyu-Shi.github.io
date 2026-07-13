@@ -1118,6 +1118,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -1127,6 +1144,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -1150,6 +1172,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -1171,13 +1226,27 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+        
+          
+        
         
         
         
         <a href="/publication/2026_notational_animating/" >
-            <img src="/publication/2026_notational_animating/featured_hu_64eb62b1a159a7bb.webp" height="467" width="1024"
-                alt="Notational Animating: An Interactive Approach to Creating and Editing Animation Keyframes" loading="lazy">
+            <div class="pub-teaser-box">
+              <video class="pub-teaser-video" autoplay loop muted playsinline preload="metadata"
+                  aria-label="Notational Animating: An Interactive Approach to Creating and Editing Animation Keyframes" style="transform: scale(1)">
+                
+                <source src="/publication/2026_notational_animating/teaser_video.mov">
+              </video>
+            </div>
         </a>
         
     </div>
@@ -1334,6 +1403,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -1343,6 +1429,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -1366,6 +1457,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -1387,14 +1511,34 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+          
+          
+          
+        
+        
+          
+        
+        
+        
+        
         
         
         
         <a href="/publication/2025_browsecomp-plus/" >
-            <img src="/publication/2025_browsecomp-plus/featured_hu_1573c676c19ded75.webp" height="485" width="1024"
-                alt="BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent" loading="lazy">
+            <div class="pub-teaser-box">
+              <img class="pub-teaser-img" src="/publication/2025_browsecomp-plus/featured_hu_6abab9ca76c13a7e.webp"
+                  height="576" width="1024"
+                  alt="BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent" loading="lazy" style="transform: translateY(-1.6%) scale(1.1)">
+            </div>
         </a>
+        
         
     </div>
     <div class="col-12 col-md-8 pub-content-col">
@@ -1546,6 +1690,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -1555,6 +1716,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -1578,6 +1744,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -1599,13 +1798,31 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+          
+          
+          
+        
+        
+          
+        
         
         
         
         <a href="/publication/2025_brickify/" >
-            <img src="/publication/2025_brickify/featured_hu_6fe7af9ea13490d3.webp" height="327" width="1024"
-                alt="Brickify: Enabling Expressive Design Intent Specification through Direct Manipulation on Design Tokens" loading="lazy">
+            <div class="pub-teaser-box">
+              <video class="pub-teaser-video" autoplay loop muted playsinline preload="metadata"
+                  aria-label="Brickify: Enabling Expressive Design Intent Specification through Direct Manipulation on Design Tokens" style="transform: translateY(-7%) scale(1.15)">
+                
+                <source src="/publication/2025_brickify/teaser_video.mov">
+              </video>
+            </div>
         </a>
         
     </div>
@@ -1745,6 +1962,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -1754,6 +1988,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -1777,6 +2016,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -1798,13 +2070,35 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+          
+          
+          
+        
+        
+          
+          
+          
+        
+        
+          
+        
         
         
         
         <a href="/publication/2024_piet/" >
-            <img src="/publication/2024_piet/featured_hu_cadb33c450bb91c9.webp" height="356" width="1024"
-                alt="Piet: Facilitating Color Authoring for Motion Graphics Video" loading="lazy">
+            <div class="pub-teaser-box">
+              <video class="pub-teaser-video" autoplay loop muted playsinline preload="metadata"
+                  aria-label="Piet: Facilitating Color Authoring for Motion Graphics Video" style="transform: translateX(12%) translateY(17%) scale(1.8)">
+                
+                <source src="/publication/2024_piet/teaser_video.mp4">
+              </video>
+            </div>
         </a>
         
     </div>
@@ -1968,6 +2262,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -1977,6 +2288,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -2000,6 +2316,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -2021,13 +2370,25 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+        
         
         
         
         <a href="/publication/2024_mondrian/" >
-            <img src="/publication/2024_mondrian/featured_hu_15aa18c97f4eb6cd.webp" height="350" width="1024"
-                alt="Exploring Interactive Color Palettes for Abstraction-Driven Exploratory Image Colorization" loading="lazy">
+            <div class="pub-teaser-box">
+              <video class="pub-teaser-video" autoplay loop muted playsinline preload="metadata"
+                  aria-label="Exploring Interactive Color Palettes for Abstraction-Driven Exploratory Image Colorization">
+                
+                <source src="/publication/2024_mondrian/teaser_video.mov">
+              </video>
+            </div>
         </a>
         
     </div>
@@ -2169,6 +2530,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -2178,6 +2556,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -2201,6 +2584,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -2222,13 +2638,31 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+          
+          
+          
+        
+        
+          
+        
         
         
         
         <a href="/publication/2023_destijl/" >
-            <img src="/publication/2023_destijl/featured_hu_73ab6228ffc87053.webp" height="336" width="1024"
-                alt="De-Stijl: Facilitating Graphics Design with Interactive 2D Color Palette Recommendation" loading="lazy">
+            <div class="pub-teaser-box">
+              <video class="pub-teaser-video" autoplay loop muted playsinline preload="metadata"
+                  aria-label="De-Stijl: Facilitating Graphics Design with Interactive 2D Color Palette Recommendation" style="transform: translateY(-4%) scale(1)">
+                
+                <source src="/publication/2023_destijl/teaser_video.mov">
+              </video>
+            </div>
         </a>
         
     </div>
@@ -2395,6 +2829,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -2404,6 +2855,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -2427,6 +2883,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -2448,14 +2937,28 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
         <a href="/publication/2021_sr/" >
-            <img src="/publication/2021_sr/featured_hu_4ae8b4c71cc50a2b.webp" height="247" width="1024"
-                alt="Real-World Blind Super-Resolution via Feature Matching with Implicit High-Resolution Priors" loading="lazy">
+            <div class="pub-teaser-box">
+              <img class="pub-teaser-img" src="/publication/2021_sr/featured_hu_75abe17f14de8cc0.webp"
+                  height="420" width="1024"
+                  alt="Real-World Blind Super-Resolution via Feature Matching with Implicit High-Resolution Priors" loading="lazy">
+            </div>
         </a>
+        
         
     </div>
     <div class="col-12 col-md-8 pub-content-col">
@@ -2590,6 +3093,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -2599,6 +3119,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -2622,6 +3147,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -2643,14 +3201,28 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
         <a href="/publication/2020_asl/" >
-            <img src="/publication/2020_asl/featured_hu_eb019fcb3bc41aa4.webp" height="343" width="1024"
-                alt="Teaching American Sign Language in Mixed Reality" loading="lazy">
+            <div class="pub-teaser-box">
+              <img class="pub-teaser-img" src="/publication/2020_asl/featured_hu_eb019fcb3bc41aa4.webp"
+                  height="343" width="1024"
+                  alt="Teaching American Sign Language in Mixed Reality" loading="lazy">
+            </div>
         </a>
+        
         
     </div>
     <div class="col-12 col-md-8 pub-content-col">
@@ -2784,6 +3356,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -2793,6 +3382,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -2816,6 +3410,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -2837,14 +3464,28 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
         <a href="/publication/2019_smartinsole/" >
-            <img src="/publication/2019_smartinsole/featured_hu_fb086b5b542af0bb.webp" height="350" width="1024"
-                alt="Accurate and Fast Classification of Foot Gestures for Virtual Locomotion" loading="lazy">
+            <div class="pub-teaser-box">
+              <img class="pub-teaser-img" src="/publication/2019_smartinsole/featured_hu_fb086b5b542af0bb.webp"
+                  height="350" width="1024"
+                  alt="Accurate and Fast Classification of Foot Gestures for Virtual Locomotion" loading="lazy">
+            </div>
         </a>
+        
         
     </div>
     <div class="col-12 col-md-8 pub-content-col">
@@ -3115,6 +3756,23 @@
 
 
 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+
 <style>
  
 .pub-list-item-spacing {
@@ -3124,6 +3782,11 @@
 .pub-teaser-col,
 .pub-content-col {
   padding-top: 0.5rem;
+}
+ 
+.pub-details .pub-title {
+  margin-top: -0.3em;  
+  line-height: 1.35;
 }
 .pub-venue-line { margin: 0 0 0.2rem 0; }
 .pub-award-line { margin: 0 0 0rem 0; }
@@ -3147,6 +3810,39 @@
 .pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
 .pub-buttons .btn-wrapper a { margin-right: 0; }
 
+ 
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+   
+  .pub-teaser-col {
+    flex: 0 0 calc(33.33333% * 0.9000);
+    max-width: calc(33.33333% * 0.9000);
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;  
+   
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-video { object-fit: cover; }
+
 .fa-award:before {
     content: "\f559";
 }
@@ -3168,13 +3864,35 @@
 <li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;">
 
   <div class="row align-items-start">
-    <div class="col-12 col-md-4 pub-teaser-col" style="padding-top: 1.8rem;">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        
+        
+        
+        
+        
+          
+          
+          
+        
+        
+          
+          
+          
+        
+        
+          
+        
         
         
         
         <a href="/publication/2025_compsketch/" >
-            <img src="/publication/2025_compsketch/featured_hu_4f0b74562c87a1e7.webp" height="293" width="1024"
-                alt="Comprehensive Sketching: Exploring Infographic Design Alternatives in Parallel" loading="lazy">
+            <div class="pub-teaser-box">
+              <video class="pub-teaser-video" autoplay loop muted playsinline preload="metadata"
+                  aria-label="Comprehensive Sketching: Exploring Infographic Design Alternatives in Parallel" style="transform: translateX(15%) translateY(-4%) scale(1.5)">
+                
+                <source src="/publication/2025_compsketch/teaser_video.mov">
+              </video>
+            </div>
         </a>
         
     </div>
