@@ -9606,13 +9606,9 @@ html, body {
 .wg-about .about-widget-content-col h1:first-child {
   margin-top: 0; }
 
-.wg-about #profile {
-  text-align: left; }
-
 .wg-about #profile .avatar {
   width: 280px;
-  height: 280px;
-  margin-left: 0; }
+  height: 280px; }
 
 .wg-about .portrait-title h2 {
   font-size: 1.6rem; }
@@ -9693,8 +9689,8 @@ html, body {
 .profile-news-list .news-item {
   font-size: 0.75rem;
   font-weight: 400;
-  line-height: 1.55;
-  padding: 0.6rem 0;
+  line-height: 1.45;
+  padding: 0.3rem 0;
   border-bottom: 1px solid #eef0f3; }
 
 body {
@@ -9718,6 +9714,9 @@ strong {
 @media (min-width: 1200px) {
   .container {
     max-width: 1380px; } }
+
+#about {
+  padding-bottom: 1.5rem !important; }
 
 .pub-filter {
   margin: 0.25rem 0 1.75rem; }
