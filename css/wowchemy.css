@@ -9606,6 +9606,97 @@ html, body {
 .wg-about .about-widget-content-col h1:first-child {
   margin-top: 0; }
 
+.wg-about #profile {
+  text-align: left; }
+
+.wg-about #profile .avatar {
+  width: 280px;
+  height: 280px;
+  margin-left: 0; }
+
+.wg-about .portrait-title h2 {
+  font-size: 1.6rem; }
+
+.network-links {
+  list-style: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0.75rem 0 0; }
+
+.network-links li {
+  margin: 0; }
+
+.network-links a {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color 0.15s ease; }
+
+.network-links a:hover,
+.network-links a:focus {
+  color: #A9294F;
+  text-decoration: none; }
+
+.network-links .doc-row {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 0.2rem; }
+
+.network-links .doc-row a {
+  gap: 0.4em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4a4f5a; }
+
+.network-links .link-arrow {
+  flex: 0 0 auto; }
+
+.network-links .social-row a {
+  gap: 0.65em;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333a45; }
+
+.network-links .social-row i {
+  width: 1.1em;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4a4f5a; }
+
+.profile-news {
+  margin: 1.75rem 0;
+  text-align: left; }
+
+.profile-news-heading {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9aa0ab;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #e7e9ee; }
+
+.profile-news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin; }
+
+.profile-news-list .news-item {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.55;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eef0f3; }
+
 body {
   font-size: .9rem;
   font-weight: 500;
@@ -9623,6 +9714,44 @@ strong {
 .section-heading h1 {
   font-size: 1.6rem;
   /* pick whatever size you like */ }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1380px; } }
+
+.pub-filter {
+  margin: 0.25rem 0 1.75rem; }
+
+.pub-filter-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #4a4f5a;
+  margin: 0 0 0.55rem; }
+
+.pub-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; }
+
+.pub-filter-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #1f2933;
+  background-color: #f1f1f3;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease; }
+
+.pub-filter-btn:hover {
+  background-color: #e4e4e8; }
+
+.pub-filter-btn.active {
+  background-color: #1a1a1a;
+  color: #fff; }
 
 #publications {
   padding-top: 1rem !important; }
