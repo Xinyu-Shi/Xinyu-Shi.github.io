@@ -7214,7 +7214,7 @@ a.text-dark:hover, a.text-dark:focus {
  *  Wowchemy's Core Style
  **************************************************/
 html {
-  font-family: "Libertinus Serif", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 16.17px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.65;
@@ -7302,7 +7302,7 @@ ul.task-list li input[type='checkbox'] {
 
 /* Navigation bar text */
 .navbar-light {
-  font-family: "Libertinus Sans", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility; }
@@ -7314,7 +7314,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Libertinus Serif", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -7369,7 +7369,7 @@ a:focus {
 
 pre,
 code {
-  font-family: "Menlo", monospace; }
+  font-family: "Figtree", monospace; }
 
 pre,
 code:not(.hljs) {
@@ -9028,7 +9028,7 @@ html[dir='rtl'] body {
 
 .section-subheading {
   font-size: 1.25rem;
-  font-family: "Libertinus Serif", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem; }
@@ -9610,6 +9610,10 @@ header.header--fixed {
 .wg-about .portrait-title h2 {
   font-size: 1.6rem; }
 
+.portrait-title .name-cjk {
+  font-family: "Liu Jian Mao Cao", "Hannotate SC", "Xingkai SC", "Kaiti SC", "KaiTi", cursive;
+  color: #555555; }
+
 .network-links {
   list-style: none;
   display: inline-flex;
@@ -9698,12 +9702,25 @@ body {
   text-align: left;
   background-color: #fff; }
 
-/* Persistent override for bold text weight.
-   Libertinus loads weights 400/600/700 — a 500 here would fall back to
-   regular, so use 700 (the bold cut, same as the resume's LinLibertine Bold). */
+/* Persistent override for bold text weight */
 b,
 strong {
-  font-weight: 700; }
+  font-weight: 500;
+  /* or 700 if you want heavier */ }
+
+.wg-about .article-style {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.65; }
+
+.wg-about .article-style strong,
+.wg-about .article-style b {
+  color: #1e3a8a;
+  font-weight: 600; }
+
+.wg-about .article-style a strong,
+.wg-about .article-style a b {
+  color: inherit; }
 
 .section-heading h1 {
   font-size: 1.6rem;
