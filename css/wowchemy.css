@@ -9727,6 +9727,9 @@ strong {
 .wg-about .article-style a b {
   color: inherit; }
 
+.wg-about .article-style > p:first-of-type a {
+  color: #25343F; }
+
 .section-heading h1 {
   font-size: 1.6rem;
   /* pick whatever size you like */ }
