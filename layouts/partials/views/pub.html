@@ -1,0 +1,353 @@
+
+{{ $item := .item }}
+{{ $widget := .page }}
+{{ $index := .index }}
+
+{{/* Teaser media is intentionally not linked — clicking it used to open the
+     publication's abstract page. Set back to true to restore that. */}}
+{{ $do_link := false }}
+
+{{ $link := $item.Params.external_link | default $item.RelPermalink }}
+{{ $target := .target }}
+
+{{/* Get summary. */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+  {{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if $item.Params.abstract }}
+  {{ $summary = $item.Params.abstract | markdownify | emojify }}
+{{ else if $item.Summary }}
+  {{ $summary = $item.Summary }}
+{{ end }}
+
+{{ $order := "" }}
+{{ if and ($widget.Params.design.flip_alt_rows | default true) (not (modBool $index 2)) }}
+  {{ $order = "order-md-2" }}
+{{ end }}
+
+{{/* Global teaser card size, set in config/_default/params.yaml under `pub_teaser`:
+     width  – card width as % of the teaser column (or any CSS length)
+     ratio  – card aspect ratio, width ÷ height
+     height – optional explicit CSS height; overrides ratio when set */}}
+{{ $teaserCfg := site.Params.pub_teaser | default dict }}
+{{ $boxWidth := "100%" }}
+{{ with $teaserCfg.width }}
+  {{ $boxWidth = printf "%v" . }}
+  {{ if not (findRE `(px|rem|em|vw|%)$` $boxWidth) }}{{ $boxWidth = printf "%s%%" $boxWidth }}{{ end }}
+{{ end }}
+{{ $boxRatio := $teaserCfg.ratio | default 2.1 }}
+{{ $boxHeight := "" }}
+{{ with $teaserCfg.height }}
+  {{ $boxHeight = printf "%v" . }}
+  {{ if not (findRE `(px|rem|em|vh|%)$` $boxHeight) }}{{ $boxHeight = printf "%spx" $boxHeight }}{{ end }}
+{{ end }}
+{{/* The width setting sizes the teaser COLUMN (card fills it), so the text
+     column flexes into any freed space and always hugs the teaser. */}}
+{{ $teaserColW := "" }}
+{{ if strings.HasSuffix $boxWidth "%" }}
+  {{ $frac := div (float (strings.TrimSuffix "%" $boxWidth)) 100 }}
+  {{ $teaserColW = printf "calc(33.33333%% * %.4f)" $frac }}
+{{ else }}
+  {{ $teaserColW = printf "calc(%s + 30px)" $boxWidth }}{{/* + the column's own gutter */}}
+{{ end }}
+<style>
+/* Spacing between publication items */
+.pub-list-item-spacing {
+  margin-bottom: 2.5rem;
+}
+/* Align teaser figure top with venue tag top */
+.pub-teaser-col {
+  padding-top: 0.5rem;
+}
+/* Text column sits slightly lower than the teaser */
+.pub-content-col {
+  padding-top: 1rem;
+}
+/* Align the title's first line with the teaser card's top edge: kill the
+   theme's .section-subheading margin-top and the line-height half-leading */
+.pub-details .pub-title {
+  margin-top: -0.3em; /* cancels the half-leading so the cap top sits on the edge line */
+  line-height: 1.35;
+  text-wrap: pretty; /* avoid a single orphan word on the last line */
+}
+.pub-venue-line { margin: 0 0 0.2rem 0; }
+.pub-award-line, .pub-media-line { margin: 0 0 0rem 0; }
+.pub-buttons { margin-top: 0.5rem !important; } /* gap between item body and the button row */
+.venue-tag { text-decoration: none; }
+
+.honor-tag, .best-tag {
+  color: #BD4B4B;
+  font-size: .8rem;
+  background-color: #FFF2C6;
+  border-radius: .2rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  padding-right: 0.5rem;
+  padding-top: 0.05rem;
+  position: relative;
+}
+.pub-details .honor-tag i,
+.pub-details .best-tag i { margin-right: .25rem; }
+
+/* Media-coverage tag: same shape as the award tags, but muted (no yellow
+   background, gray text) so it reads as secondary information */
+.media-tag {
+  color: #BD4B4B;
+  font-size: .8rem;
+  background-color: #FDEDED;
+  border-radius: .2rem;
+  font-weight: 400;
+  letter-spacing: .02em;
+  padding-right: 0.5rem;
+  padding-top: 0.05rem;
+  position: relative;
+}
+.pub-details .media-tag i { margin-right: .25rem; color: #f2c037; } /* golden bulb */
+.media-tag a { color: inherit; text-decoration: underline; }
+
+.pub-buttons .btn-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
+.pub-buttons .btn-wrapper a { margin-right: 0; }
+
+/* Uniform teaser card: a rounded-corner box at a fixed 2.1:1 ratio frames
+   every teaser, so all publications show an identical outline. Images (all
+   wider than 2.1:1) are centered inside without cropping; the 16:9 video
+   fills the whole card via a slight top/bottom crop. */
+.pub-teaser-box {
+  display: block;
+  width: 100%;
+  {{ if $boxHeight }}height: {{ $boxHeight | safeCSS }};{{ else }}aspect-ratio: {{ $boxRatio }} / 1;{{ end }}
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  /* Size the teaser column from `pub_teaser.width`; the text column takes
+     the remaining row width, so no dead gap opens between them. */
+  .pub-teaser-col {
+    flex: 0 0 {{ $teaserColW | safeCSS }};
+    max-width: {{ $teaserColW | safeCSS }};
+  }
+  .pub-content-col {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.pub-teaser-img,
+.pub-teaser-gif,
+.pub-teaser-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none; /* theme caps video height at 400px */
+  /* per-item front matter knobs: `teaser_zoom` scales from the center and
+     `teaser_offset_y` shifts vertically; the card's overflow:hidden clips
+     whatever moves past its edges */
+  transform-origin: center center;
+}
+.pub-teaser-img { object-fit: contain; }
+.pub-teaser-gif,
+.pub-teaser-video { object-fit: cover; }
+
+.fa-award:before {
+    content: "\f559";
+}
+
+.view-pub .btn.btn-sm, .view-pub .btn-group-sm > .btn {
+    padding: 0.25rem 0.25rem;
+    font-size: 0.65rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: rgba(170, 196, 245, 0.2);
+    color: #333;
+    font-weight: 400;
+}
+
+/* hr{
+  border: 0;
+  border-width:0;
+  width:100%;
+  background-color:#dfe3e4;
+} */
+
+</style>
+{{/* Topic filter pills: shown once, above the first item, only in the
+     full-papers section (publication_type "1"). Topics come from each
+     publication's `topic` front matter. A preferred order can be set with
+     `content.topic_order`; unlisted topics are appended newest-first. */}}
+{{ $ptype := "" }}
+{{ with $widget.Params.content }}{{ with .filters }}{{ $ptype = .publication_type }}{{ end }}{{ end }}
+{{ if and (eq $index 0) (eq $ptype "1") }}
+{{ $pubs := where (where site.RegularPages "Section" "publication") "Params.publication_types" "1" }}
+{{ $topics := slice }}
+{{ range $pubs.ByDate.Reverse }}
+  {{ with .Params.topic }}{{ if not (in $topics .) }}{{ $topics = $topics | append . }}{{ end }}{{ end }}
+{{ end }}
+{{ $orderedTopics := slice }}
+{{ with $widget.Params.content.topic_order }}
+  {{ range . }}
+    {{ if and (in $topics .) (not (in $orderedTopics .)) }}{{ $orderedTopics = $orderedTopics | append . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ range $topics }}
+  {{ if not (in $orderedTopics .) }}{{ $orderedTopics = $orderedTopics | append . }}{{ end }}
+{{ end }}
+{{ $topics = $orderedTopics }}
+{{ if $topics }}
+<div class="pub-filter">
+  <div class="pub-filter-buttons">
+    <button type="button" class="pub-filter-btn active" data-filter="*">All</button>
+    {{ range $topics }}
+    <button type="button" class="pub-filter-btn" data-filter="{{ . | urlize }}">{{ . }}</button>
+    {{ end }}
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var section = document.getElementById('publications');
+    if (!section) return;
+    var buttons = section.querySelectorAll('.pub-filter-btn');
+    var items = section.querySelectorAll('li.view-pub');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        items.forEach(function (li) {
+          li.style.display = (filter === '*' || li.getAttribute('data-topic') === filter) ? '' : 'none';
+        });
+      });
+    });
+  });
+</script>
+{{ end }}
+{{ end }}
+<ul  style="border-bottom: 0rem solid #d9d9d9; width:100%; height:fit-content; margin: 0rem; padding: 0">
+<li class="col-lg-12 view-pub pub-list-item-spacing" style="list-style-type: none;" data-topic="{{ with $item.Params.topic }}{{ . | urlize }}{{ end }}">
+
+  <div class="row align-items-start">
+    <div class="col-12 col-md-4 pub-teaser-col">
+        {{/* Prefer animated GIF teasers, with video retained as a content fallback. */}}
+        {{ $gif := $item.Resources.GetMatch "*teaser*.gif" }}
+        {{ $video := or ($item.Resources.GetMatch "*teaser*.mp4") ($item.Resources.GetMatch "*teaser*.m4v") ($item.Resources.GetMatch "*teaser*.mov") ($item.Resources.GetMatch "*featured*.mp4") ($item.Resources.GetMatch "*featured*.m4v") ($item.Resources.GetMatch "*featured*.mov") }}
+        {{/* Per-item media adjustment via front matter:
+             teaser_zoom: 1.2      scales from the center (card clips overflow)
+             teaser_offset_x: 10   shifts left/right, in % of card width (or any CSS unit)
+             teaser_offset_y: -8   shifts up/down, in % of card height (or any CSS unit) */}}
+        {{ $transforms := slice }}
+        {{ with $item.Params.teaser_offset_x }}
+          {{ $shift := printf "%v" . }}
+          {{ if not (findRE `(px|rem|em|%)$` $shift) }}{{ $shift = printf "%s%%" $shift }}{{ end }}
+          {{ $transforms = $transforms | append (printf "translateX(%s)" $shift) }}
+        {{ end }}
+        {{ with $item.Params.teaser_offset_y }}
+          {{ $shift := printf "%v" . }}
+          {{ if not (findRE `(px|rem|em|%)$` $shift) }}{{ $shift = printf "%s%%" $shift }}{{ end }}
+          {{ $transforms = $transforms | append (printf "translateY(%s)" $shift) }}
+        {{ end }}
+        {{ with $item.Params.teaser_zoom }}
+          {{ $transforms = $transforms | append (printf "scale(%v)" .) }}
+        {{ end }}
+        {{ $teaserStyle := "" }}
+        {{ if $transforms }}{{ $teaserStyle = printf "transform: %s" (delimit $transforms " ") }}{{ end }}
+        {{ if $gif }}
+        {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+            <div class="pub-teaser-box">
+              <img class="pub-teaser-gif" src="{{ $gif.RelPermalink }}"
+                  alt="{{ $item.Title }}" loading="eager"{{ with $teaserStyle }} style="{{ . | safeCSS }}"{{ end }}>
+            </div>
+        {{if $do_link}}</a>{{end}}
+        {{ else if $video }}
+        {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+            <div class="pub-teaser-box">
+              <video class="pub-teaser-video" autoplay loop muted playsinline webkit-playsinline preload="auto"
+                  aria-label="{{ $item.Title }}"{{ with $teaserStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                <source src="{{ $video.RelPermalink }}"{{ if in (slice "mp4" "m4v") (lower $video.MediaType.SubType) }} type="video/mp4"{{ end }}>
+              </video>
+            </div>
+        {{if $do_link}}</a>{{end}}
+        {{ else }}
+        {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+        {{ with $resource }}
+        {{ $image := .Resize "1024x webp" }}
+        {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+            <div class="pub-teaser-box">
+              <img class="pub-teaser-img" src="{{ $image.RelPermalink }}"
+                  height="{{ $image.Height}}" width="{{ $image.Width}}"
+                  alt="{{ $item.Title }}" loading="lazy"{{ with $teaserStyle }} style="{{ . | safeCSS }}"{{ end }}>
+            </div>
+        {{if $do_link}}</a>{{end}}
+        {{end}}
+        {{ end }}
+    </div>
+    <div class="col-12 col-md-8 pub-content-col">
+      <div class="pub-details">
+        {{/* Title */}}
+        <div class="section-subheading article-title pub-title mb-1" style="font-size: .9rem; font-weight: 600; color: #25343F;">
+          {{ $item.Title }}
+        </div>
+
+        {{/* Authors */}}
+        <p class="pub-authors mb-1" style="font-size: 0.8rem; font-weight: 400; color: #333;">
+          <span class="article-metadata li-cite-author">
+            {{ partial "page_metadata_authors" $item }}
+          </span>
+        </p>
+
+        {{/* Venue tag + proceedings on same line */}}
+        <p class="pub-venue-line">
+          <a class="venue-tag" style="font-size: .75rem; font-weight: 500; background-color: #AAC4F5; color: #000000; border-radius: .2rem; padding: .08rem .35rem; margin-right: .4rem;">
+            {{- $item.Params.venue_tag | markdownify -}}
+          </a>
+          <span style="font-size: 0.8rem; font-weight: 400; color: #5d666c;">
+            {{ if $item.Params.publication_short }}
+              {{- $item.Params.publication_short | markdownify -}}.
+            {{ else if $item.Params.publication }}
+              {{- $item.Params.publication | markdownify -}}.
+            {{ end }}
+          </span>
+        </p>
+        {{ if or $item.Params.venue_tag_2 $item.Params.publication_2 }}
+        <p class="pub-venue-line">
+          {{ if $item.Params.venue_tag_2 }}
+          <a class="venue-tag" style="font-size: .75rem; font-weight: 500; background-color: #AAC4F5; color: #000000; border-radius: .2rem; padding: .08rem .35rem; margin-right: .4rem;">
+            {{- $item.Params.venue_tag_2 | markdownify -}}
+          </a>
+          {{ end }}
+          <span style="font-size: 0.8rem; font-weight: 400; color: #5d666c;">
+            {{ if $item.Params.publication_2 }}
+              {{- $item.Params.publication_2 | markdownify -}}.
+            {{ end }}
+          </span>
+        </p>
+        {{ end }}
+
+        {{/* Award line: icon + caps text */}}
+        {{ if or $item.Params.honor_tag $item.Params.best_tag }}
+        <p class="pub-award-line">
+          {{ if $item.Params.honor_tag }}
+            <span class="honor-tag"><i class="fa fa-award"></i> {{ $item.Params.honor_tag | markdownify }}</span>
+          {{ end }}
+          {{ if $item.Params.best_tag }}
+            <span class="best-tag"><i class="fa-solid fa-trophy"></i> {{ $item.Params.best_tag | markdownify }}</span>
+          {{ end }}
+        </p>
+        {{ end }}
+
+        {{/* Media coverage appears on its own line below awards. */}}
+        {{ if $item.Params.media_tag }}
+        <p class="pub-media-line">
+          <span class="media-tag"><i class="fa fa-lightbulb"></i> {{ $item.Params.media_tag | markdownify }}</span>
+        </p>
+        {{ end }}
+
+        {{/* Action buttons row */}}
+        <div class="pub-buttons">
+          <span class="btn-wrapper">{{ partial "page_links" (dict "page" $item "is_list" 1) }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</li>
+</ul>

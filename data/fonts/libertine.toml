@@ -1,0 +1,13 @@
+# Font style metadata
+# Matches the resume font: Linux Libertine (body) + Linux Biolinum (headings).
+# Libertinus is the maintained successor of Linux Libertine/Biolinum on Google Fonts.
+name = "Linux Libertine (Libertinus)"
+
+# Optional Google font URL
+google_fonts = "family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400"
+
+# Font families
+heading_font = "Libertinus Serif"
+body_font = "Libertinus Serif"
+nav_font = "Libertinus Sans"
+mono_font = "Menlo"

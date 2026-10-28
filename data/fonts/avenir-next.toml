@@ -1,0 +1,10 @@
+# Font style metadata
+# Avenir Next is a system font on Apple devices — no Google Fonts URL needed.
+# Fallbacks for other platforms are added in assets/scss/custom.scss.
+name = "Avenir Next"
+
+# Font families
+heading_font = "Avenir Next"
+body_font = "Avenir Next"
+nav_font = "Avenir Next"
+mono_font = "Menlo"
