@@ -3,3 +3,8 @@
 uploads/Notational_Animating_project_page/static/videos/CHI26_video_final_with_name.mov
 uploads/Notational_Animating_project_page/static/videos/full_video.mov
 # Ignore large mov files
+
+# Local build and macOS metadata
+.DS_Store
+.hugo_build.lock
+_site/

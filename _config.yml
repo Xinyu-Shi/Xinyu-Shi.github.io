@@ -1,0 +1,32 @@
+# GitHub Pages publishes the prebuilt Hugo site from master / (root).
+# Do not render Hugo sources with Jekyll or publish duplicate build directories.
+# Keep this file active: a root .nojekyll would bypass these exclusions.
+# Directory slashes are required: Jekyll 3 treats "public" as a prefix and
+# would also exclude the published "publication" directories.
+exclude:
+  - assets/
+  - config/
+  - content/
+  - data/
+  - images/
+  - layouts/
+  - partials/
+  - public/
+  - resources/
+  - scss/
+  - scripts/
+  - static/
+  - LICENSE.md
+  - README.md
+  - academic.Rproj
+  - go.mod
+  - go.sum
+  - netlify.toml
+  - preview.png
+  - theme.toml
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/

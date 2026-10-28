@@ -1,4 +1,26 @@
-# [Hugo Academic Theme](https://github.com/wowchemy/starter-hugo-academic)
+# Xinyu Shi's website
+
+This site uses Hugo/Wowchemy. GitHub Pages publishes the generated files at
+the repository root from `master` (`Deploy from a branch`, `/(root)`).
+
+After editing `content/`, `static/`, `layouts/`, or `config/`, build the published
+site with Python 3.8+ and Hugo **0.152.2 extended** (plus Go for Hugo modules):
+
+```sh
+python3 scripts/build_site.py
+git diff --stat
+```
+
+Commit and push the source changes together with the generated root files.
+Running `hugo` alone updates `public/`, which is not the publishing directory.
+The script builds in a temporary directory and copies successful output to the
+root while preserving standalone project pages and other existing files.
+
+`_config.yml` excludes Hugo sources, tooling, and duplicate `public/` output
+from the GitHub Pages Jekyll step. Do not add a root `.nojekyll`: it bypasses
+those exclusions and causes the entire mixed source/output tree to be published.
+
+## [Hugo Academic Theme](https://github.com/wowchemy/starter-hugo-academic)
 
 [![Screenshot](./preview.png)](https://wowchemy.com/hugo-themes/)
 

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Xinyu Shi</title>
-    <link>https://example.com/publication/</link>
-      <atom:link href="https://example.com/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://xinyu-shi.github.io/publication/</link>
+      <atom:link href="https://xinyu-shi.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu_1d71da864c336368.png</url>
+      <url>https://xinyu-shi.github.io/media/icon_hu_1d71da864c336368.png</url>
       <title>Publications</title>
-      <link>https://example.com/publication/</link>
+      <link>https://xinyu-shi.github.io/publication/</link>
     </image>
     
     <item>
-      <title>Hawkeye: Inspecting Agentic Search Trajectories</title>
-      <link>https://example.com/publication/2026_hawkeye/</link>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2026_hawkeye/</guid>
+      <title>Notational Animating: An Interactive Approach to Creating and Editing Animation Keyframes</title>
+      <link>https://xinyu-shi.github.io/publication/2026_notational_animating/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://xinyu-shi.github.io/publication/2026_notational_animating/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -35,10 +35,10 @@
     </item>
     
     <item>
-      <title>Notational Animating: An Interactive Approach to Creating and Editing Animation Keyframes</title>
-      <link>https://example.com/publication/2026_notational_animating/</link>
-      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2026_notational_animating/</guid>
+      <title>Hawkeye: Inspecting Agentic Search Trajectories</title>
+      <link>https://xinyu-shi.github.io/publication/2026_hawkeye/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://xinyu-shi.github.io/publication/2026_hawkeye/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -58,9 +58,9 @@
     
     <item>
       <title>BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent</title>
-      <link>https://example.com/publication/2025_browsecomp-plus/</link>
+      <link>https://xinyu-shi.github.io/publication/2025_browsecomp-plus/</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2025_browsecomp-plus/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2025_browsecomp-plus/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -80,9 +80,9 @@
     
     <item>
       <title>Brickify: Enabling Expressive Design Intent Specification through Direct Manipulation on Design Tokens</title>
-      <link>https://example.com/publication/2025_brickify/</link>
+      <link>https://xinyu-shi.github.io/publication/2025_brickify/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2025_brickify/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2025_brickify/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -102,9 +102,9 @@
     
     <item>
       <title>Comprehensive Sketching: Exploring Infographic Design Alternatives in Parallel</title>
-      <link>https://example.com/publication/2025_compsketch/</link>
+      <link>https://xinyu-shi.github.io/publication/2025_compsketch/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2025_compsketch/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2025_compsketch/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -124,9 +124,9 @@
     
     <item>
       <title>Piet: Facilitating Color Authoring for Motion Graphics Video</title>
-      <link>https://example.com/publication/2024_piet/</link>
+      <link>https://xinyu-shi.github.io/publication/2024_piet/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2024_piet/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2024_piet/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -146,9 +146,9 @@
     
     <item>
       <title>Exploring Interactive Color Palettes for Abstraction-Driven Exploratory Image Colorization</title>
-      <link>https://example.com/publication/2024_mondrian/</link>
+      <link>https://xinyu-shi.github.io/publication/2024_mondrian/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2024_mondrian/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2024_mondrian/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -168,9 +168,9 @@
     
     <item>
       <title>De-Stijl: Facilitating Graphics Design with Interactive 2D Color Palette Recommendation</title>
-      <link>https://example.com/publication/2023_destijl/</link>
+      <link>https://xinyu-shi.github.io/publication/2023_destijl/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2023_destijl/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2023_destijl/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -190,9 +190,9 @@
     
     <item>
       <title>Real-World Blind Super-Resolution via Feature Matching with Implicit High-Resolution Priors</title>
-      <link>https://example.com/publication/2021_sr/</link>
+      <link>https://xinyu-shi.github.io/publication/2021_sr/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2021_sr/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2021_sr/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -212,9 +212,9 @@
     
     <item>
       <title>Teaching American Sign Language in Mixed Reality</title>
-      <link>https://example.com/publication/2020_asl/</link>
+      <link>https://xinyu-shi.github.io/publication/2020_asl/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2020_asl/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2020_asl/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -233,9 +233,9 @@
     
     <item>
       <title>Accurate and Fast Classification of Foot Gestures for Virtual Locomotion</title>
-      <link>https://example.com/publication/2019_smartinsole/</link>
+      <link>https://xinyu-shi.github.io/publication/2019_smartinsole/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/2019_smartinsole/</guid>
+      <guid>https://xinyu-shi.github.io/publication/2019_smartinsole/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
